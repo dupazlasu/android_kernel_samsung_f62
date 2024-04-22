@@ -533,6 +533,7 @@ else
 CLANG_FLAGS	+= --target=$(notdir $(srctree)/toolchain/clang/host/linux-x86/clang-r383902-jopp/bin/aarch64-linux-gnu-)
 endif # CROSS_COMPILE
 
+LLVM_IAS ?= 1
 ifeq ($(LLVM_IAS),0)
 CLANG_FLAGS	+= -no-integrated-as
 GCC_TOOLCHAIN_DIR := $(dir $(shell which $(CROSS_COMPILE)elfedit))
