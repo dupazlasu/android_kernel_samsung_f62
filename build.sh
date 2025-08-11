@@ -57,7 +57,8 @@ build_zip() {
  cd "${RDIR}/buildzip"
  zip -r9 "../build/${ZIP_NAME}" ./*
  echo "[✓] Flashable zip created at build/${ZIP_NAME}"
-  cd "${RDIR}"
+ cd "${RDIR}"
+ rm -f ${RDIR}/AIK-Linux/split_img/boot.img-kernel
 }
 
 
