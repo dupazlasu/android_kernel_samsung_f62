@@ -54,7 +54,7 @@ build_zip() {
 
 #build boot.img
 build_boot() {    
-    rm -f ${RDIR}/AIK-Linux/split_img/boot.img-kernel ${RDIR}/AIK-Linux/boot.img ${RDIR}/build/boot.img
+    rm -f ${RDIR}/AIK-Linux/split_img/boot.img-kernel ${RDIR}/AIK-Linux/boot.img 
     cp "${RDIR}/out/arch/arm64/boot/Image" ${RDIR}/AIK-Linux/split_img/boot.img-kernel
     echo $BOARD > ${RDIR}/AIK-Linux/split_img/boot.img-board
     mkdir -p ${RDIR}/AIK-Linux/ramdisk
